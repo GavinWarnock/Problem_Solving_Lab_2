@@ -41,7 +41,7 @@ print(string.capitalize())
 # Task 3: Palindrome
 # Create a variable to hold a string inputted by a user
 
-string_2 = input("What word would you like to check?")
+string_2 = input("What word would you like to check? ")
 
 # Create a variable to hold the reversed value of the inputted string
 
@@ -68,7 +68,7 @@ else:
 
 # Create a variable that holds and inputted string of characters
 
-characters = input("Please type some characters.")
+characters = input("Please type some characters. ")
 
 # Create a new variable to hold the compressed string of characters
 
@@ -82,7 +82,7 @@ count = 1
 
 for character in range(len(characters)-1):
 
-# Use an if statement to check the position of each character
+# Use an if statement to add the characters together and print the result
     if characters[character] == characters[character+1]:
         count = count + 1
     else:
