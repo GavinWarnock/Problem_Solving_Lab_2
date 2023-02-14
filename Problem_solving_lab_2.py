@@ -36,4 +36,57 @@ print(string.title())
 
 
 print(string.capitalize())
+
+
+# Task 3: Palindrome
+# Create a variable to hold a string inputted by a user
+
+string_2 = input("What word would you like to check?")
+
+# Create a variable to hold the reversed value of the inputted string
+
+reversed_string = ""
+
+
+# Create a for loop to acquire the reversed version of the string that is inputted
+
+for index in range(len(string_2)-1, -1, -1):
+    reversed_string += string_2[index]
+print(reversed_string)
+
+
+# Create an if statement to check if the string and the reversed string match
+
   
+if string_2 == reversed_string:
+    print(f"Yes, {string_2} is a palindrome")
+else:
+    print(f"{string_2} is not a palindrome.")
+
+
+# Task 4: Compress a string of characters
+
+# Create a variable that holds and inputted string of characters
+
+characters = input("Please type some characters.")
+
+# Create a new variable to hold the compressed string of characters
+
+compressed_characters = ""
+
+# Create a variable to identify the count of each character and set it equal to 1
+
+count = 1
+
+# Create a for loop that inputs the information we know
+
+for character in range(len(characters)-1):
+
+# Use an if statement to check the position of each character
+    if characters[character] == characters[character+1]:
+        count = count + 1
+    else:
+        compressed_characters = compressed_characters + characters[character] + str(count)
+        count = 1
+compressed_characters = compressed_characters + characters[character+1] + str(count)
+print(compressed_characters)
