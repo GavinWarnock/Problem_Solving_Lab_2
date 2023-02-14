@@ -24,20 +24,29 @@ print(reversed_word)
 
 # Create a variable to hold a String
 
-string = "hello world"
+string = input("Please type a string. ")
 
-# Identify the letters that need to be capitalized: in this case they are H and W
-# Research how to alter a lower case letter to an upper case letter in Python
-# There are multiple functions you can use to capitalize letters such as the title() function or the capitalize() function
+# Create a second variable to hold new string
 
-# Using the title() function you can raise the case of the first letter in words of the string
+capitalized_string = ""
 
-print(string.title())
+# Identify the letters that need to be capitalized: in this case they are H, W, M, N, and I
 
+# Create a for loop to print each letter and identify that there are spaces before each letter that needs to be capitalized
 
-print(string.capitalize())
+for index in range(0,len(string)):
+    if index == 0:
+        capitalized_string += string[index].upper()
+    elif string[index - 1] == " ":
+        capitalized_string += string[index].upper()
+    elif string[index] == " ":
+        capitalized_string += string[index]
+    else:
+        capitalized_string += string[index]
+print(capitalized_string)
 
-
+        
+    
 # Task 3: Palindrome
 # Create a variable to hold a string inputted by a user
 
@@ -82,7 +91,7 @@ count = 1
 
 for character in range(len(characters)-1):
 
-# Use an if statement to add the characters together and print the result
+# Use an if statement to add to the count based on the number of characters we have
     if characters[character] == characters[character+1]:
         count = count + 1
     else:
